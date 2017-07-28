@@ -13,6 +13,7 @@ export default class Main extends Component {
     super(props, context);
 
     this.state = {
+
       'rangePicker' : {},
       'linked' : {},
       'datePicker' : null,
@@ -51,10 +52,13 @@ export default class Main extends Component {
           </div>
 
           <DateRange
+              minDate={moment().add(-3,'years')}
+              maxDate={moment()}
             startDate='10/11/2015'
             endDate={ now => {
               return '11/12/2015';
             }}
+
             onInit={ this.handleChange.bind(this, 'rangePicker') }
             onChange={ this.handleChange.bind(this, 'rangePicker') }
           />
@@ -74,6 +78,8 @@ export default class Main extends Component {
             />
           </div>
           <DateRange
+              minDate={moment().add(-3,'years')}
+              maxDate={moment()}
             startDate={ now => {
               return '9/10/2015';
             }}
@@ -95,6 +101,8 @@ export default class Main extends Component {
             />
           </div>
           <Calendar
+              minDate={moment().add(-3,'years')}
+              maxDate={moment()}
             date={ now => { return now.add(-4, 'days') } }
             onInit={ this.handleChange.bind(this, 'datePicker') }
             onChange={ this.handleChange.bind(this, 'datePicker') }
@@ -127,6 +135,8 @@ export default class Main extends Component {
             />
           </div>
           <Calendar
+              minDate={moment().add(-3,'years')}
+              maxDate={moment()}
             firstDayOfWeek={ 1 }
             date={ now => { return now.add(-4, 'days') } }
             onInit={ this.handleChange.bind(this, 'firstDayOfWeek') }
@@ -148,6 +158,8 @@ export default class Main extends Component {
             />
           </div>
           <DateRange
+              minDate={moment().add(-3,'years')}
+              maxDate={moment()}
             linkedCalendars={ true }
             ranges={ defaultRanges }
             onInit={ this.handleChange.bind(this, 'predefined') }
@@ -162,6 +174,8 @@ export default class Main extends Component {
         <Section title='Theming'>
           <div />
           <DateRange
+              minDate={moment().add(-3,'years')}
+              maxDate={moment()}
             linkedCalendars={ true }
             theme={{
               DateRange      : {
