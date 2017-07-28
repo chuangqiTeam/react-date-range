@@ -162,6 +162,10 @@ const defaultTheme = {
     PredefinedRangesItemActive: {
         color: '#E74C3C',
     },
+
+    monthYearSelect: {
+        backgroundColor: 'white',
+    }
 };
 
 export default (customTheme = {}) => {
@@ -237,6 +241,8 @@ export default (customTheme = {}) => {
 
         PredefinedRangesItem: {...defaultTheme.PredefinedRangesItem, ...customTheme.PredefinedRangesItem},
 
-        PredefinedRangesItemActive: {...defaultTheme.PredefinedRangesItemActive, ...customTheme.PredefinedRangesItemActive}
+        PredefinedRangesItemActive: {...defaultTheme.PredefinedRangesItemActive, ...customTheme.PredefinedRangesItemActive},
+
+        monthYearSelect: {...defaultTheme.monthYearSelect, ...customTheme.monthYearSelect}
     }
 }

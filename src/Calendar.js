@@ -181,7 +181,7 @@ class Calendar extends Component {
                 }
                 <span>
           <span className={classes.month}>
-              <select className="monthyearselect" value={monthNum} onChange={this._onSelectMonth.bind(this)}>
+              <select className="monthyearselect" value={monthNum} onChange={this._onSelectMonth.bind(this)} style={styles.monthYearSelect}>
                   {
                       MONTHES.map((v, i) => {
                           if (minDate) {
@@ -204,7 +204,7 @@ class Calendar extends Component {
           <span className={classes.year}>
               {
                   yearArr.length === 1 ? year :
-                      <select className="monthyearselect" value={year} onChange={this._onSelectYear.bind(this)}>
+                      <select className="monthyearselect" value={year} onChange={this._onSelectYear.bind(this)} style={styles.monthYearSelect}>
                           {
                               yearArr.map(v => {
                                   return <option value={v} key={v}>{v}</option>
