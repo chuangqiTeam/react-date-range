@@ -3,6 +3,12 @@
 ![](https://david-dm.org/Adphorus/react-date-range.svg)
 ![](https://david-dm.org/Adphorus/react-date-range/dev-status.svg)
 
+---------------------------------------------------------
+CQASO修改后react-date-range，加了以下功能
+* 可以直接选择月份和年
+* 切换月份时，限制只能切换在minDate和maxDate之间
+---------------------------------------------------------
+
 A React component for choosing dates and date ranges. Uses [Moment.js](http://momentjs.com/) for date operations.
 
 **Live Demo :** [http://adphorus.github.io/react-date-range](http://adphorus.github.io/react-date-range)
